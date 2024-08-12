@@ -1,0 +1,45 @@
+from django.urls import path
+from .views import *
+
+urlpatterns = [
+    path('signup/', signup_view, name='signup'),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+
+    path('dashboard/', dashboard_view, name='dashboard'),
+
+    path('dashboard/profile/', view_profile, name='view_profile'),
+    path('dashboard/contactdetail/', view_contactdetail, name='view_contactdetail'),
+    path('dashboard/socialmedia/', view_socialmedia, name='view_socialmedia'),
+    path('dashboard/education/', view_education, name='view_education'),
+    path('dashboard/careerbreak/', view_careerbreak, name='view_careerbreak'),
+    path('dashboard/service/', view_service, name='view_service'),
+    path('dashboard/language/', view_language, name='view_language'),
+    path('dashboard/volunteerexperience/', view_volunteerexperience, name='view_volunteerexperience'),
+    path('dashboard/project/', view_project, name='view_project'),
+    path('dashboard/certification/', view_certification, name='view_certification'),
+    path('dashboard/recommendation/', view_recommendation, name='view_recommendation'),
+    path('dashboard/publication/', view_publication, name='view_publication'),
+    path('dashboard/patent/', view_patent, name='view_patent'),
+    path('dashboard/honoraward/', view_honoraward, name='view_honoraward'),
+    path('dashboard/testscore/', view_testscore, name='view_testscore'),
+    path('dashboard/organization/', view_organization, name='view_organization'),
+
+    path('dashboard/profile/edit/', edit_profile, name='edit_profile'),
+    path('dashboard/contactdetail/edit/', edit_contactdetail, name='edit_contactdetail'),
+    path('dashboard/socialmedia/edit/', edit_socialmedia, name='edit_socialmedia'),
+    path('dashboard/experience/edit/', edit_experience, name='edit_experience'),
+    path('dashboard/education/edit/', edit_education, name='edit_education'),
+    path('dashboard/careerbreak/edit/', edit_careerbreak, name='edit_careerbreak'),
+    path('dashboard/service/edit/', edit_service, name='edit_service'),
+    path('dashboard/language/edit/', edit_language, name='edit_language'),
+    path('dashboard/volunteerexperience/edit/', edit_volunteerexperience, name='edit_volunteerexperience'),
+    path('dashboard/project/edit/', edit_project, name='edit_project'),
+    path('dashboard/certification/edit/', edit_certification, name='edit_certification'),
+    path('dashboard/recommendation/edit/', edit_recommendation, name='edit_recommendation'),
+    path('dashboard/publication/edit/', edit_publication, name='edit_publication'),
+    path('dashboard/patent/edit/', edit_patent, name='edit_patent'),
+    path('dashboard/honoraward/edit/', edit_honoraward, name='edit_honoraward'),
+    path('dashboard/testscore/edit/', edit_testscore, name='edit_testscore'),
+    path('dashboard/organization/edit/', edit_organization, name='edit_organization'),
+]

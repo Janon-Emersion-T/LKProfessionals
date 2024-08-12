@@ -1,0 +1,37 @@
+{% extends 'homepage/_base.html' %}
+
+{% block title %}Pricing - LKProfessionals{% endblock %}
+
+{% block content %}
+<section class="bg-blue-900 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Pricing Plans</h1>
+        <p class="text-lg md:text-xl mb-8">Choose the plan that’s right for you.</p>
+    </div>
+</section>
+
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Basic</h3>
+                <p class="text-gray-700 mb-4">Free forever. Perfect for those just starting out.</p>
+                <p class="text-2xl font-bold mb-4">$0/month</p>
+                <a href="#" class="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800">Sign Up</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Pro</h3>
+                <p class="text-gray-700 mb-4">Advanced tools for professionals looking to take their career to the next level.</p>
+                <p class="text-2xl font-bold mb-4">$9.99/month</p>
+                <a href="#" class="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800">Sign Up</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold mb-4">Enterprise</h3>
+                <p class="text-gray-700 mb-4">For businesses and teams needing a comprehensive career solution.</p>
+                <p class="text-2xl font-bold mb-4">Contact Us</p>
+                <a href="#" class="bg-blue-900 text-white py-2 px-4 rounded-lg hover:bg-blue-800">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

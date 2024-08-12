@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your CareerBreak</h2>
+<ul>
+    {% for car in careerbreak %}
+        <li>Start Date: {{ car.start_date }} <br>
+             End Date: {{ car.end_date }} <br>
+             Reason {{ car.reason }} <br>
+            <a href="{% url 'edit_careerbreak' %}">Edit CareerBreak</a>
+        </li>
+
+    {% endfor %}
+</ul>
+<a href="{% url 'add_careerbreak' %}">Add CareerBreak</a>
+{% endblock %}

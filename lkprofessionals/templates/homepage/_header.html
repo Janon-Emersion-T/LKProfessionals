@@ -1,0 +1,43 @@
+{%load static%}
+<!-- Header -->
+<header class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto flex items-center justify-between flex-wrap">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <a href="{% url 'home' %}" class="text-2xl font-bold"><img src="{%static 'logo.png'%}" alt="LKProfessionals"></a>
+        </div>
+
+        <!-- Hamburger Menu Button (for mobile) -->
+        <div class="block lg:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav id="menu" class="lg:flex lg:items-center lg:space-x-4 hidden w-full lg:w-auto">
+            <ul class="flex flex-col lg:flex-row lg:space-x-4 w-full lg:w-auto">
+                <li><a href="{% url 'home' %}" class="block py-2 px-4 hover:bg-gray-700">Home</a></li>
+                <li><a href="{% url 'about' %}" class="block py-2 px-4 hover:bg-gray-700">About Us</a></li>
+                <li><a href="{% url 'services' %}" class="block py-2 px-4 hover:bg-gray-700">Services</a></li>
+                <li><a href="{% url 'pricing' %}" class="block py-2 px-4 hover:bg-gray-700">Pricing</a></li>
+                <li><a href="{% url 'contact' %}" class="block py-2 px-4 hover:bg-gray-700">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Login Button (Desktop) -->
+        <div class="flex-shrink-0 hidden lg:block">
+            <a href="{% url 'login' %}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+                Login
+            </a>
+        </div>
+    </div>
+    <!-- Login Button (Mobile) -->
+    <div class="lg:hidden mt-4 text-center">
+        <a href="{% url 'login' %}" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">
+            Login
+        </a>
+    </div>
+</header>
