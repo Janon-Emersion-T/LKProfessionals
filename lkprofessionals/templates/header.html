@@ -1,13 +1,56 @@
-<header class="bg-gray-800 text-gray-200 p-4 flex justify-between items-center shadow-lg">
-    <div class="text-2xl font-bold">
-        <a href="#" class="text-white hover:text-gray-300">LKProfessionals</a>
+<header class="bg-gray-800 p-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-white text-lg font-semibold">
+        <a href="{% url 'home' %}">LKProfessionals</a>
     </div>
-    <nav>
-        <ul class="flex space-x-6">
-            <li><a href="#" class="hover:text-gray-300">Home</a></li>
-            <li><a href="#" class="hover:text-gray-300">Profile</a></li>
-            <li><a href="#" class="hover:text-gray-300">Dashboard</a></li>
-            <li><a href="{%url 'logout'%}" class="hover:text-gray-300">Logout</a></li>
-        </ul>
+
+    <!-- Navigation Menu -->
+    <nav class="hidden md:flex space-x-4">
+        <a href="{% url 'about' %}" class="text-gray-300 hover:text-white">About Us</a>
+        <a href="{% url 'services' %}" class="text-gray-300 hover:text-white">Services</a>
+        <a href="{% url 'pricing' %}" class="text-gray-300 hover:text-white">Pricing</a>
+        <a href="{% url 'contact' %}" class="text-gray-300 hover:text-white">Contact Us</a>
     </nav>
+
+    <!-- Right-side Icons -->
+    <div class="flex items-center space-x-4">
+        <!-- Notifications Icon -->
+        <div class="relative">
+            <button class="text-gray-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m5 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Messages Icon -->
+        <div class="relative">
+            <button class="text-gray-300 hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 16.992v-13A2.992 2.992 0 0018.009 1H5.992C4.892 1 4 1.892 4 2.992v13c0 1.1.892 2.008 1.992 2.008H8l2.251 2.25c.675.675 1.772.675 2.447 0L15 19h3.009c1.1 0 2.008-.891 2.008-2.008zM5.992 4h12.017c.542 0 .992.449.992.992v11.017H17l-3.378 3.377a.75.75 0 01-1.061 0L9 16.992H5.992A.992.992 0 015 16V4.992C5 4.449 5.449 4 5.992 4z" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- User Profile Icon -->
+        <div class="relative" x-data="{ open: false }">
+            <button @click="open = !open" class="text-gray-300 hover:text-white flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 19a4 4 0 015.658 0m1.878-1.879a6 6 0 018.486 0M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span class="text-gray-300">Profile</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20">
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">My Portfolio</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Settings</a>
+                <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Help</a>
+                <a href="{% url 'logout' %}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100">Logout</a>
+            </div>
+        </div>
+    </div>
 </header>
