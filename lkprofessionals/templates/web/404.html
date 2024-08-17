@@ -1,0 +1,21 @@
+{%extends 'web/_base.html'%}
+{%load static%}
+
+
+{% block content%}
+    </header>
+
+    <main class="page-error">
+        <div class="container">
+            <section class="error-section">
+                <h1 class="error-code">404</h1>
+                <p class="error-message">Sorry, the page you are looking for could not be found.</p>
+                <img src="assets/images/404.png" alt="page not found" class="error-img">
+                <a href="{%url 'index'%}" class="btn btn-info btn-error-action">Return Home</a>
+            </section>
+        </div>
+    </main>
+
+
+
+{% endblock content%}
